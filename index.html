@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecții de Engleză</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .lesson-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .lesson-card {
+            background: #f8f9fa;
+            border: 3px solid #e9ecef;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .lesson-card:hover {
+            border-color: #007bff;
+            background: #f0f8ff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.2);
+        }
+
+        .lesson-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .lesson-description {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .lesson-duration {
+            font-size: 18px;
+            color: #888;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .play-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .play-button:hover {
+            background: #20a135;
+            transform: scale(1.05);
+        }
+
+        .play-button:active {
+            transform: scale(0.98);
+        }
+
+        .play-icon {
+            font-size: 28px;
+        }
+
+        .instructions {
+            background: #e7f3ff;
+            border: 2px solid #b3d9ff;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .instructions h2 {
+            font-size: 24px;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .instructions p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .footer p {
+            font-size: 16px;
+            color: #888;
+        }
+
+        /* Responsive pentru tablete și telefoane */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .header p {
+                font-size: 20px;
+            }
+            
+            .lesson-title {
+                font-size: 24px;
+            }
+            
+            .lesson-description {
+                font-size: 18px;
+            }
+            
+            .play-button {
+                font-size: 20px;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Lecții de Engleză</h1>
+            <p>Învățați engleză în ritmul dumneavoastră</p>
+        </div>
+
+        <div class="instructions">
+            <h2>Cum să folosiți lecțiile:</h2>
+            <p>• Apăsați butonul verde "▶️ Ascultă Lecția" pentru a începe</p>
+            <p>• Ascultați cu atenție explicațiile în română</p>
+            <p>• Repetați cuvintele când auziți pauza</p>
+            <p>• Nu vă grăbiți - repetați lecția de câte ori aveți nevoie</p>
+        </div>
+
+        <div class="lesson-grid">
+            <!-- Lecția 1 - ÎNCEPĂTOR -->
+            <div class="lesson-card">
+                <div class="lesson-title">👋 Salutări de Bază</div>
+                <div class="lesson-description">
+                    Primul pas: învățați "Hello", "Hi" și "Good morning" cu multe repetiții și pauze lungi
+                </div>
+                <div class="lesson-duration">⏱️ Durată: ~2.5 minute | 📈 ÎNCEPUT AICI</div>
+                <button class="play-button" onclick="playLesson('salutari_baza')">
+                    <span class="play-icon">▶️</span>
+                    <span>Ascultă Lecția</span>
+                </button>
+            </div>
+
+            <!-- Lecția 2 -->
+            <div class="lesson-card">
+                <div class="lesson-title">📚 Verbul "a fi" Complet</div>
+                <div class="lesson-description">
+                    Învățați "I am", "You are", "He is", "She is" cu exerciții repetitive și pauze corecte
+                </div>
+                <div class="lesson-duration">⏱️ Durată: ~5.5 minute</div>
+                <button class="play-button" onclick="playLesson('verbul_fi_complet')">
+                    <span class="play-icon">▶️</span>
+                    <span>Ascultă Lecția</span>
+                </button>
+            </div>
+
+            <!-- Lecția 3 -->
+            <div class="lesson-card">
+                <div class="lesson-title">🔢 Numere 1-5</div>
+                <div class="lesson-description">
+                    Numerele de la 1 la 5 cu exerciții foarte repetitive și pauze de 6 secunde
+                </div>
+                <div class="lesson-duration">⏱️ Durată: ~4 minute</div>
+                <button class="play-button" onclick="playLesson('numere_1_5_corecte')">
+                    <span class="play-icon">▶️</span>
+                    <span>Ascultă Lecția</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💻 Lecții generate automat cu inteligență artificială</p>
+            <p>🎧 Pentru cea mai bună experiență, folosiți căști sau difuzoare</p>
+        </div>
+    </div>
+
+    <script>
+        let currentAudio = null;
+
+        function playLesson(lessonName) {
+            // Oprim audio-ul curent dacă există
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+                resetAllButtons();
+            }
+
+            // Găsim butonul pentru această lecție
+            const button = event.target.closest('.play-button');
+            const audioPath = `audio/${lessonName}.mp3`;
+            
+            // Creăm noul audio
+            currentAudio = new Audio(audioPath);
+            
+            // Schimbăm textul butonului
+            const buttonText = button.querySelector('span:last-child');
+            const originalText = buttonText.textContent;
+            
+            buttonText.textContent = 'Se încarcă...';
+            button.style.background = '#ffc107';
+            button.disabled = true;
+
+            // Când audio-ul e gata să se joace
+            currentAudio.addEventListener('canplay', function() {
+                buttonText.textContent = '⏸️ Oprește';
+                button.style.background = '#dc3545';
+                button.disabled = false;
+            });
+
+            // Când audio-ul se termină
+            currentAudio.addEventListener('ended', function() {
+                buttonText.textContent = originalText;
+                button.style.background = '#28a745';
+                button.disabled = false;
+                currentAudio = null;
+            });
+
+            // Dacă apare o eroare
+            currentAudio.addEventListener('error', function() {
+                alert('Nu am putut încărca lecția. Verificați că fișierele audio sunt disponibile.');
+                buttonText.textContent = originalText;
+                button.style.background = '#28a745';
+                button.disabled = false;
+                currentAudio = null;
+            });
+
+            // Pornim redarea
+            currentAudio.play().catch(function(error) {
+                console.error('Eroare la redarea audio:', error);
+                alert('Nu am putut reda lecția. Încercați din nou.');
+                buttonText.textContent = originalText;
+                button.style.background = '#28a745';
+                button.disabled = false;
+                currentAudio = null;
+            });
+        }
+
+        function resetAllButtons() {
+            const buttons = document.querySelectorAll('.play-button');
+            buttons.forEach(button => {
+                const buttonText = button.querySelector('span:last-child');
+                buttonText.textContent = 'Ascultă Lecția';
+                button.style.background = '#28a745';
+                button.disabled = false;
+            });
+        }
+
+        // Opresc audio-ul când se închide pagina
+        window.addEventListener('beforeunload', function() {
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+        });
+    </script>
+</body>
+</html>
