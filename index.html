@@ -246,24 +246,32 @@
         let currentAudio = null;
 
         function playLesson(lessonName) {
-            // Oprim audio-ul curent dacă există
+            // Găsim butonul pentru această lecție
+            const button = event.target.closest('.play-button');
+            const buttonText = button.querySelector('span:last-child');
+            const originalText = 'Ascultă Lecția';
+            
+            // Dacă audio-ul este în redare, îl oprim
+            if (currentAudio && !currentAudio.paused) {
+                currentAudio.pause();
+                currentAudio = null;
+                resetAllButtons();
+                return;
+            }
+
+            // Oprim orice alt audio care ar putea rula
             if (currentAudio) {
                 currentAudio.pause();
                 currentAudio = null;
                 resetAllButtons();
             }
 
-            // Găsim butonul pentru această lecție
-            const button = event.target.closest('.play-button');
             const audioPath = `audio/${lessonName}.mp3`;
             
             // Creăm noul audio
             currentAudio = new Audio(audioPath);
             
-            // Schimbăm textul butonului
-            const buttonText = button.querySelector('span:last-child');
-            const originalText = buttonText.textContent;
-            
+            // Schimbăm textul butonului la încărcare
             buttonText.textContent = 'Se încarcă...';
             button.style.background = '#ffc107';
             button.disabled = true;
@@ -281,6 +289,20 @@
                 button.style.background = '#28a745';
                 button.disabled = false;
                 currentAudio = null;
+            });
+
+            // Dacă se pune pauză manual
+            currentAudio.addEventListener('pause', function() {
+                if (currentAudio && currentAudio.currentTime > 0 && !currentAudio.ended) {
+                    buttonText.textContent = '▶️ Continuă';
+                    button.style.background = '#28a745';
+                }
+            });
+
+            // Când se reia redarea
+            currentAudio.addEventListener('play', function() {
+                buttonText.textContent = '⏸️ Oprește';
+                button.style.background = '#dc3545';
             });
 
             // Dacă apare o eroare
