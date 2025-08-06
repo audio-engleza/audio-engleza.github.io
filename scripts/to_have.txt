@@ -1,0 +1,94 @@
+# Audio-Engleza Lesson Script
+# Generated: 2025-08-07T00:48:07.895364
+# English: to have
+# Romanian: a avea
+# 
+# You can edit this script as needed, then use generate_audio.py to create the audio file
+#
+# Format: Each line should be "Speaker: Text [pause_seconds seconds]"
+# Valid speakers: Teacher, Man, Woman
+#
+# ========================================
+
+Teacher: Astăzi vom învăța o expresie foarte simplă în engleză. [2 seconds]
+Teacher: Expresia este [2 seconds]
+Man: to have [3 seconds]
+Teacher: Care înseamnă a avea [3 seconds]
+
+Teacher: Să repetăm încet. Spuneți după mine [2 seconds]
+Man: to have [4 seconds]
+Man: to have [4 seconds]
+Man: to have [4 seconds]
+
+Teacher: Foarte bine! Acum să învățăm trei fraze simple și utile [3 seconds]
+Teacher: Acestea sunt fraze pe care le veți folosi des [2 seconds]
+
+Teacher: Prima frază [2 seconds]
+Man: I have two children [3 seconds]
+Teacher: Care înseamnă am doi copii [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: I have two children [4 seconds]
+
+Teacher: A doua frază [2 seconds]
+Man: I have one grandchild [3 seconds]
+Teacher: Care înseamnă am un nepot [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: I have one grandchild [4 seconds]
+
+Teacher: A treia frază [2 seconds]
+Man: I have a good family [3 seconds]
+Teacher: Care înseamnă am o familie bună [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: I have a good family [4 seconds]
+
+Teacher: Să repetăm toate trei frazele [3 seconds]
+Man: I have two children [4 seconds]
+Man: I have one grandchild [4 seconds]
+Man: I have a good family [4 seconds]
+
+Teacher: Acum să învățăm câteva cuvinte importante din aceste fraze [3 seconds]
+Teacher: Primul cuvânt important este [2 seconds]
+Man: children [3 seconds]
+Teacher: Care înseamnă copii [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: children [4 seconds]
+
+Teacher: Al doilea cuvânt important este [2 seconds]
+Man: grandchild [3 seconds]
+Teacher: Care înseamnă nepot [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: grandchild [4 seconds]
+
+Teacher: Excelent! Acum să vedem cum ați folosi această expresie [3 seconds]
+Teacher: Imaginați-vă o conversație simplă [3 seconds]
+
+Teacher: Cineva vă întreabă [2 seconds]
+Woman: Do you have children? [3 seconds]
+Teacher: Dumneavoastră răspundeți [2 seconds]
+Man: Yes, I have two children [4 seconds]
+Teacher: Care înseamnă da, am doi copii [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: Yes, I have two children [4 seconds]
+
+Teacher: Acum altcineva vă întreabă [2 seconds]
+Woman: Do you have grandchildren? [3 seconds]
+Teacher: Și dumneavoastră spuneți [2 seconds]
+Man: Yes, I have one grandchild [4 seconds]
+Teacher: Care înseamnă da, am un nepot [3 seconds]
+
+Teacher: Să mai exersăm o dată [3 seconds]
+Teacher: Când cineva vă întreabă despre familie, puteți spune [2 seconds]
+Man: I have a good family [4 seconds]
+Teacher: Din nou [2 seconds]
+Man: I have a good family [4 seconds]
+
+Teacher: Foarte bine! Să repetăm tot ce am învățat [3 seconds]
+Teacher: Expresia completă este [2 seconds]
+Man: to have [4 seconds]
+Teacher: Care înseamnă a avea [3 seconds]
+Teacher: Repetați pentru ultima dată [2 seconds]
+Man: to have [4 seconds]
+Man: to have [4 seconds]
+Man: to have [4 seconds]
+
+Teacher: Excelent! Acum sunteți pregătit să folosiți această expresie în conversații! [3 seconds]

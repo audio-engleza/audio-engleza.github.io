@@ -1,0 +1,92 @@
+# Audio-Engleza Lesson Script
+# Generated: 2025-08-07T01:13:46.687355
+# English: I am happy to see you
+# Romanian: Mă bucur să te văd
+# 
+# You can edit this script as needed, then use generate_audio.py to create the audio file
+#
+# Format: Each line should be "Speaker: Text [pause_seconds seconds]"
+# Valid speakers: Teacher, Man, Woman
+#
+# ========================================
+
+Teacher: Astăzi vom învăța o expresie foarte simplă în engleză. [2 seconds]
+Teacher: Expresia este [2 seconds]
+Man: I am happy to see you [3 seconds]
+Teacher: Care înseamnă Mă bucur să te văd [3 seconds]
+
+Teacher: Să repetăm încet. Spuneți după mine [2 seconds]
+Man: I am happy to see you [4 seconds]
+Man: I am happy to see you [4 seconds]
+Man: I am happy to see you [4 seconds]
+
+Teacher: Foarte bine! Acum să învățăm trei fraze simple și utile [3 seconds]
+Teacher: Acestea sunt fraze pe care le veți folosi des [2 seconds]
+
+Teacher: Prima frază [2 seconds]
+Man: I am happy to see you, my grandchild [3 seconds]
+Teacher: Care înseamnă Mă bucur să te văd, nepotul meu [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: I am happy to see you, my grandchild [4 seconds]
+
+Teacher: A doua frază [2 seconds]
+Man: I am happy to see you, my family [3 seconds]
+Teacher: Care înseamnă Mă bucur să te văd, familia mea [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: I am happy to see you, my family [4 seconds]
+
+Teacher: A treia frază [2 seconds]
+Man: I am happy to see you, my doctor [3 seconds]
+Teacher: Care înseamnă Mă bucur să te văd, doctorul meu [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: I am happy to see you, my doctor [4 seconds]
+
+Teacher: Să repetăm toate trei frazele [3 seconds]
+Man: I am happy to see you, my grandchild [4 seconds]
+Man: I am happy to see you, my family [4 seconds]
+Man: I am happy to see you, my doctor [4 seconds]
+
+Teacher: Acum să învățăm câteva cuvinte importante din aceste fraze [3 seconds]
+Teacher: Primul cuvânt important este [2 seconds]
+Man: grandchild [3 seconds]
+Teacher: Care înseamnă nepot [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: grandchild [4 seconds]
+
+Teacher: Al doilea cuvânt important este [2 seconds]
+Man: family [3 seconds]
+Teacher: Care înseamnă familie [2 seconds]
+Teacher: Repetați [2 seconds]
+Man: family [4 seconds]
+
+Teacher: Excelent! Acum să vedem cum ați folosi această expresie [3 seconds]
+Teacher: Imaginați-vă o conversație simplă [3 seconds]
+
+Teacher: Cineva vă spune [2 seconds]
+Woman: Hello, how are you? [3 seconds]
+Teacher: Dumneavoastră răspundeți [2 seconds]
+Man: I am happy to see you [4 seconds]
+Teacher: Foarte bine! Repetați [2 seconds]
+Man: I am happy to see you [4 seconds]
+
+Teacher: Acum altcineva vă întreabă ceva [2 seconds]
+Woman: Good morning! [3 seconds]
+Teacher: Și dumneavoastră spuneți [2 seconds]
+Man: I am happy to see you [4 seconds]
+
+Teacher: Să mai exersăm o dată [3 seconds]
+Teacher: Când întâlniți pe cineva, spuneți [2 seconds]
+Man: I am happy to see you [4 seconds]
+Teacher: Din nou [2 seconds]
+Man: I am happy to see you [4 seconds]
+
+Teacher: Foarte bine! Să repetăm tot ce am învățat [3 seconds]
+Teacher: Expresia completă este [2 seconds]
+Man: I am happy to see you [4 seconds]
+Teacher: Care înseamnă Mă bucur să te văd [3 seconds]
+Teacher: Repetați pentru ultima dată [2 seconds]
+Man: I am happy to see you [4 seconds]
+Man: I am happy to see you [4 seconds]
+Man: I am happy to see you [4 seconds]
+
+Teacher: Excelent! Acum sunteți pregătit să folosiți această expresie în conversații! [3 seconds]
