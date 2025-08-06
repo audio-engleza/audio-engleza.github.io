@@ -66,15 +66,6 @@ După 5-10 minute, site-ul va fi la:
 https://USERNAME.github.io/lectii-engleza-varstnici
 ```
 
-## 📱 Cum să folosiți lecțiile
-
-### Pentru vârstnici:
-1. **Deschideți pagina** în browser pe computer, tabletă sau telefon
-2. **Conectați căști** sau difuzoarele (pentru pronunție clară)
-3. **Apăsați butonul verde** pentru lecția dorită
-4. **Ascultați cu atenție** explicațiile în română
-5. **Repetați cuvintele** când auziți pauzele lungi
-6. **Nu vă grăbiți** - repetați lecția de mai multe ori
 
 ### Structura fiecărei lecții:
 1. **Introducere** - Profesorul explică ce veți învăța (în română)

@@ -2,12 +2,6 @@
 
 Această pagină web simplă oferă lecții audio de engleză special create pentru vârstnici, cu explicații în română și exerciții repetitive.
 
-## 📱 Cum să folosiți
-
-1. Deschideți fișierul `index.html` în browser
-2. Apăsați butonul verde "▶️ Ascultă Lecția" pentru lecția dorită
-3. Ascultați cu atenție și repetați când auziți pauzele
-4. Nu vă grăbiți - repetați lecția de câte ori aveți nevoie
 
 ## 🎯 Lecții disponibile
 

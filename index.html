@@ -56,14 +56,41 @@
             margin-bottom: 15px;
             font-style: italic;
         }
-        audio { 
-            width: 100%; 
-            margin-top: 10px;
+        .audio-player {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .play-button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        .play-button.playing {
+            background-color: #f39c12;
+        }
+        .play-button.loading {
+            background-color: #95a5a6;
+            cursor: wait;
         }
         .stats {
             text-align: center;
             margin: 20px 0;
             color: #7f8c8d;
+        }
+        audio {
+            display: none;
         }
     </style>
 </head>
@@ -83,33 +110,130 @@
     <div class="lesson">
         <div class="lesson-title">Lecția 1: to have</div>
         <div class="lesson-translation">a avea</div>
-        <audio controls preload="none">
-            <source src="audio/to_have_1.mp3" type="audio/mpeg">
-            Browserul dumneavoastră nu suportă redarea audio.
-        </audio>
+        <div class="audio-player">
+            <button class="play-button" data-audio="audio/to_have_1.mp3" data-lesson-id="1">
+                ▶️ Ascultă Lecția
+            </button>
+            <audio preload="metadata">
+                <source src="audio/to_have_1.mp3" type="audio/mpeg">
+                Browserul dumneavoastră nu suportă redarea audio.
+            </audio>
+        </div>
         <p style="font-size: 0.9em; color: #95a5a6;">
-            Durată estimată: 7-8 minutes | 
+            <span class="duration-display" data-lesson-id="1">Durată: Se încarcă...</span> | 
             Creat: 2025-08-07
         </p>
     </div>
 
     <script>
-        // Check if portal parameter exists in URL
+        // Portal functionality
         const urlParams = new URLSearchParams(window.location.search);
         const portalUrl = urlParams.get('portal');
         
         if (portalUrl) {
-            // Show the portal button
             const portalButton = document.getElementById('portalButton');
             portalButton.style.display = 'block';
             portalButton.href = portalUrl;
             
-            // Also add click handler for safety
             portalButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.location.href = portalUrl;
             });
         }
+
+        // Custom audio player functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentAudio = null;
+            let currentButton = null;
+
+            // Function to format duration
+            function formatDuration(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${minutes}:${secs.toString().padStart(2, '0')} min`;
+            }
+
+            // Get all play buttons
+            const playButtons = document.querySelectorAll('.play-button');
+            
+            playButtons.forEach(button => {
+                const audio = button.parentElement.querySelector('audio');
+                const lessonId = button.getAttribute('data-lesson-id');
+                const durationDisplay = document.querySelector(`.duration-display[data-lesson-id="${lessonId}"]`);
+                
+                // Function to update duration display
+                function updateDuration() {
+                    if (audio.duration && isFinite(audio.duration)) {
+                        durationDisplay.textContent = `Durată: ${formatDuration(audio.duration)}`;
+                        return true;
+                    }
+                    return false;
+                }
+                
+                // Try to get duration immediately (if already loaded)
+                if (!updateDuration()) {
+                    // If not available, listen for when metadata loads
+                    audio.addEventListener('loadedmetadata', updateDuration);
+                    
+                    // Also try after a short delay (for slow connections)
+                    setTimeout(() => {
+                        if (!updateDuration()) {
+                            // Force load metadata if still not available
+                            audio.load();
+                        }
+                    }, 1000);
+                }
+                
+                button.addEventListener('click', function() {
+                    // Stop any currently playing audio
+                    if (currentAudio && currentAudio !== audio) {
+                        currentAudio.pause();
+                        currentAudio.currentTime = 0;
+                        if (currentButton) {
+                            currentButton.textContent = '▶️ Ascultă Lecția';
+                            currentButton.className = 'play-button';
+                        }
+                    }
+
+                    if (audio.paused) {
+                        // Show loading state
+                        button.textContent = 'Se încarcă...';
+                        button.className = 'play-button loading';
+                        
+                        // Start playing
+                        audio.play().then(() => {
+                            button.textContent = '⏸️ Pauză';
+                            button.className = 'play-button playing';
+                            currentAudio = audio;
+                            currentButton = button;
+                        }).catch(error => {
+                            console.error('Error playing audio:', error);
+                            button.textContent = '❌ Eroare';
+                            button.className = 'play-button';
+                        });
+                    } else {
+                        // Pause
+                        audio.pause();
+                        button.textContent = '▶️ Continuă';
+                        button.className = 'play-button';
+                    }
+                });
+
+                // Handle audio ending
+                audio.addEventListener('ended', function() {
+                    button.textContent = '▶️ Ascultă Lecția';
+                    button.className = 'play-button';
+                    currentAudio = null;
+                    currentButton = null;
+                });
+
+                // Handle loading errors
+                audio.addEventListener('error', function() {
+                    button.textContent = '❌ Eroare la încărcare';
+                    button.className = 'play-button';
+                });
+            });
+        });
     </script>
 </body>
 </html>
