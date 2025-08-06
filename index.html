@@ -18,6 +18,36 @@
             padding: 20px;
         }
 
+        .back-button {
+            display: none; /* Hidden by default, shown via JavaScript */
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 20px auto;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+            background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%);
+        }
+        
+        .back-button:focus {
+            outline: 3px solid #FFD700;
+            outline-offset: 2px;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -181,6 +211,10 @@
     </style>
 </head>
 <body>
+    <a href="#" class="back-button" id="backButton" aria-label="Înapoi la portal">
+        ← Înapoi la Portal
+    </a>
+    
     <div class="container">
         <div class="header">
             <h1>🎓 Lecții de Engleză</h1>
@@ -354,6 +388,16 @@
                 currentAudio.pause();
             }
         });
+
+        // Portal back button functionality
+        const urlParams = new URLSearchParams(window.location.search);
+        const portalUrl = urlParams.get('portal');
+        
+        if (portalUrl) {
+            const backButton = document.getElementById('backButton');
+            backButton.style.display = 'block';
+            backButton.href = portalUrl;
+        }
     </script>
 </body>
 </html>
