@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecții de engleză pentru vârstnici</title>
+    <title>Lecții de engleză</title>
     <style>
         body { 
             font-family: Arial, sans-serif; 
@@ -104,6 +104,15 @@
         audio {
             display: none;
         }
+        
+        /* Hide header and stats when coming from portal */
+        .from-portal .header {
+            display: none;
+        }
+        
+        .from-portal .stats {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -111,7 +120,7 @@
     <a href="#" id="portalButton" class="back-button" style="display: none;">← Înapoi la Portal</a>
     
     <div class="header">
-        <h1>🎧 Lecții de engleză pentru vârstnici</h1>
+        <h1>🎧 Lecții de engleză</h1>
         <p>Cu explicații în română</p>
     </div>
     
@@ -168,6 +177,9 @@
             const portalButton = document.getElementById('portalButton');
             portalButton.style.display = 'block';
             portalButton.href = portalUrl;
+            
+            // Hide header and stats when coming from portal
+            document.body.classList.add('from-portal');
             
             portalButton.addEventListener('click', function(e) {
                 e.preventDefault();
