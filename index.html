@@ -59,14 +59,14 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .lesson-title { 
-            font-size: 1.4em; 
-            font-weight: bold; 
-            color: #e74c3c;
+        .lesson-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #4facfe;
             margin-bottom: 15px;
         }
         .lesson-title .romanian {
-            color: #e74c3c;
+            color: #4facfe;
             font-weight: bold;
         }
         .lesson-title .english {
@@ -80,7 +80,7 @@
             text-align: center;
         }
         .play-button {
-            background-color: #27ae60;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
             border: none;
             border-radius: 50px;
@@ -116,9 +116,14 @@
         .from-portal .header {
             display: none;
         }
-        
+
         .from-portal .stats {
             display: none;
+        }
+
+        /* Add top margin to first lesson when coming from portal */
+        .from-portal .lesson:first-of-type {
+            margin-top: 120px;
         }
     </style>
 </head>
